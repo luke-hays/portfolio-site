@@ -9,7 +9,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "npx eslint src",
-    "playwright:run": "npx playwright test tests",
+    "playwright": "playwright test",
     "playwright:show": "npx playwright show-report"
   },
   "dependencies": {
