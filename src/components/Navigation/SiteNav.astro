@@ -1,11 +1,12 @@
 ---
+import SiteNavLink from "./SiteNavLink.astro"
 ---
 
 <nav class="flex gap-3 justify-end w-full">
-  <a href="/">Home</a>
-  <a href="/portfolio/">Portfolio</a>
-  <a href="/resume/">Resume</a>
-  <a href="/blog/">Blog</a>
-  <a href="#">LinkedIn</a>
-  <a href="#">GitHub</a>
+  <SiteNavLink route="/" text="Home"/>
+  <SiteNavLink route="/portfolio/" text="Portfolio"/>
+  <SiteNavLink route="/resume/" text="Resume"/>
+  <SiteNavLink route="/blog/" text="Blog"/>
+  <SiteNavLink route="/" text="LinkedIn"/>
+  <SiteNavLink route="/" text="GitHub"/>
 </nav>

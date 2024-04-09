@@ -8,7 +8,12 @@ export default {
     extend: {},
   },
   plugins: [
-
+    plugin(function({ addBase, theme }) {
+      addBase({
+        'h1': { fontSize: theme('fontSize.5xl'), fontWeight: theme('fontWeight.semibold')},
+        'h2': { fontSize: theme('fontSize.3xl'), fontWeight: theme('fontWeight.semibold')},
+      })
+    })
   ],
 }
 
