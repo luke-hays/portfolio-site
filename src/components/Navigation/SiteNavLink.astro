@@ -1,7 +1,26 @@
 ---
-const {route, text} = Astro.props;
+const {route, text, isExternal} = Astro.props;
+
+const target = isExternal ? '_blank' : '_self'
+const rel = isExternal ? 'noopener noreferrer' : undefined
 ---
 
-<a class="bg-lime-300 hover:bg-lime-500 px-2 py-1 rounded border-2 border-lime-400 hover:border-lime-600 active:scale-[.97] transition ease-in-out" href={route}>
+<a 
+  class="
+    bg-lime-300 
+    hover:bg-lime-500 
+    px-2 
+    py-1 
+    rounded 
+    border-2 
+    border-lime-400 
+    hover:border-lime-600 
+    active:scale-[.97] 
+    transition 
+    ease-in-out" 
+  href={route}
+  target={target}
+  rel={rel}
+>
   {text}
 </a>
