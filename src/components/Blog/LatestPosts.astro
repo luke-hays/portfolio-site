@@ -1,9 +1,16 @@
 ---
 import LatestPost from "./LatestPost.astro"
+import {getCollection} from "astro:content";
+
+const blogPosts = await getCollection('blog')
+
+console.log(blogPosts)
 ---
 
 <div>
   <ul>
-    <LatestPost />
+    {blogPosts.map(post => (
+      <LatestPost slug={post.slug} data={post.data}/>
+    ))}
   </ul>
 </div>
