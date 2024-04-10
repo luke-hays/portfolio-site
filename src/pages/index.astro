@@ -1,26 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AboutMe from '../components/Cards/AboutMe.astro';
+import TopProjects from '../components/Portfolio/TopProjects.astro'
+import LatestPosts from '../components/Blog/LatestPosts.astro'
 ---
 
 <Layout>
 	<main>
 		<div class="flex flex-col gap-10">
-			<div class="flex flex-col">
+			<div class="flex flex-col bg-red-400 p-2 rounded border-2 border-red-600 gap-4">
 				<h1>Luke Hays</h1>
-				I'm a software engineer with over 5 years of experience specializing in web development, particular front end UI's. Still a WIP, need to go find some old "under construction" gifs.
+				<AboutMe />
 			</div>
-			<div class="flex flex-col">
-				<h2>Portfolio</h2>
-				<p class="text-red-500">
-					IN PROGRESS
-				</p>
+			<div class="flex flex-col bg-sky-400 p-2 rounded border-2 border-sky-600 gap-4">
+				<h2>Projects</h2>
+				<TopProjects />
 			</div>
-			<div class="flex flex-col">
+			<div class="flex flex-col bg-violet-400 p-2 rounded border-2 border-violet-600 gap-4">
 				<h2>Latest Posts</h2>
-				<p class="text-red-500">
-					IN PROGRESS
-				</p>
+				<LatestPosts />
 			</div>
-	</div>
+		</div>
 	</main>
 </Layout>
