@@ -1,7 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import {posts} from '../atoms/blogStore'
+
+const allPosts = posts.get()
 ---
 
 <Layout>
-  blog still under construction
+  {allPosts.map(post => {
+    
+  })}
 </Layout>

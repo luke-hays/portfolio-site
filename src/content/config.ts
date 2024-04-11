@@ -8,7 +8,7 @@ const blogCollection = defineCollection({
     title: z.string(),
     publishDate: z.string().transform(str => {
       const date = new Date(str)
-      return date.toISOString()
+      return date
     })
    })
  });

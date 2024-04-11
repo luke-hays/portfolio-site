@@ -1,14 +1,13 @@
 ---
-const {data, slug} = Astro.props
+const {post} = Astro.props
 
-const date = new Date(data.publishDate)
-const formattedDate = date.toLocaleString('default', { month: 'long', year: 'numeric' });
+const formattedDate = post.publishDate.toLocaleString('default', { month: 'long', year: 'numeric' });
 ---
 
 <li class="border-solid border-b-2 border-violet-800 last:border-b-0 py-2">
-  <a href={`/posts/${slug}/`} class="flex justify-between [&>*:first-child]:hover:underline">
+  <a href={`/posts/${post.slug}/`} class="flex justify-between [&>*:first-child]:hover:underline">
     <div>
-      {data.title}
+      {post.title}
     </div>
     <div>
       {formattedDate}
