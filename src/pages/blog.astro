@@ -16,7 +16,8 @@ allPosts.forEach(post => {
   postsByYear[postYear].push(post)
 })
 
-const sortedYears = Object.keys(postsByYear).toSorted().toReversed()
+const sortedYears = Object.keys(postsByYear)
+sortedYears.sort().reverse()
 ---
 
 <Layout>
