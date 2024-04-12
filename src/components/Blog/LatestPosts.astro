@@ -1,14 +1,14 @@
 ---
-import LatestPost from "./LatestPost.astro"
+import PostListItem from './PostListItem.astro'
 import {posts} from '../../atoms/blogStore'
 
-const topPosts = posts.get().slice(0, 5)
+const latestPosts = posts.get().slice(0, 5)
 ---
 
 <div>
   <ul>
-    {topPosts.map(post => (
-      <LatestPost post={post}/>
+    {latestPosts.map(post => (
+      <PostListItem post={post}/>
     ))}
   </ul>
 </div>

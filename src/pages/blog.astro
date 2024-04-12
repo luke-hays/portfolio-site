@@ -1,12 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import PostListItem from "../components/Blog/PostListItem.astro"
 import {posts} from '../atoms/blogStore'
 
 const allPosts = posts.get()
+
+const postsByYear = {}
+
+allPosts.forEach(post => {
+  const {title, publishDate, slug} = post
+
+  const formattedDate = publishDate.toLocaleString('default', { day: '2-digit', month: 'short', year: 'numeric' });
+  const [shortDate, year] = formattedDate.split(', ')
+
+  if (!Object.hasOwn(postsByYear, year)) {
+    postsByYear[year] = []
+  }
+
+  postsByYear[year].push({title, shortDate, slug})
+})
+
+const sortedYears = Object.keys(postsByYear).toSorted().toReversed()
 ---
 
 <Layout>
-  {allPosts.map(post => {
-    
+  <h1>Blog</h1>
+  {sortedYears.map(year => {
+    return (
+      <h2>{year}</h2>
+      <ul>
+        {postsByYear[year].map(post => 
+          <PostListItem title={post.title} slug={post.slug} formattedDate={post.shortDate}/>
+        )}
+      </ul>
+    )
   })}
 </Layout>

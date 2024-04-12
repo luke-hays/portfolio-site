@@ -25,6 +25,5 @@ sortedPosts.sort((a, b) => {
   return 0
 })
 
-// console.log(sortedPosts)
 
 export const posts = atom(sortedPosts);

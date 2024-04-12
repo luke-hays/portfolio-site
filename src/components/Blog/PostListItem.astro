@@ -1,0 +1,14 @@
+---
+const {title, slug, formattedDate} = Astro.props
+---
+
+<li class="border-solid border-b-2 border-violet-800 last:border-b-0 py-2">
+  <a href={`/posts/${slug}/`} class="flex justify-between [&>*:first-child]:hover:underline">
+    <div>
+      {title}
+    </div>
+    <div>
+      {formattedDate}
+    </div>
+  </a>
+</li>
