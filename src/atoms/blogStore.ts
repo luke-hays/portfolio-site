@@ -1,17 +1,15 @@
 import { atom } from 'nanostores';
-
 import {getCollection} from "astro:content";
 
 const blogPosts = await getCollection('blog')
 
-const sortedPosts = []
+const sortedPosts: Array<Post> = []
 
 blogPosts.forEach(post => {
-  const postData ={
+  const postData = {
     slug: post.slug,
     title: post.data.title,
-    publishDate: post.data.publishDate,
-    render: post.render
+    publishDate: post.data.publishDate
   }
   
   sortedPosts.push(postData)

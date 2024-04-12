@@ -4,20 +4,16 @@ import PostListItem from "../components/Blog/PostListItem.astro"
 import {posts} from '../atoms/blogStore'
 
 const allPosts = posts.get()
+const postsByYear: PostsByYear = {}
 
-const postsByYear = {}
+allPosts.forEach(post => {  
+  const postYear = post.publishDate.getFullYear().toString()
 
-allPosts.forEach(post => {
-  const {title, publishDate, slug} = post
-
-  const formattedDate = publishDate.toLocaleString('default', { day: '2-digit', month: 'short', year: 'numeric' });
-  const [shortDate, year] = formattedDate.split(', ')
-
-  if (!Object.hasOwn(postsByYear, year)) {
-    postsByYear[year] = []
+  if (!Object.hasOwn(postsByYear, postYear)) {
+    postsByYear[postYear] = []
   }
 
-  postsByYear[year].push({title, shortDate, slug})
+  postsByYear[postYear].push(post)
 })
 
 const sortedYears = Object.keys(postsByYear).toSorted().toReversed()
@@ -29,9 +25,11 @@ const sortedYears = Object.keys(postsByYear).toSorted().toReversed()
     return (
       <h2>{year}</h2>
       <ul>
-        {postsByYear[year].map(post => 
-          <PostListItem title={post.title} slug={post.slug} formattedDate={post.shortDate}/>
-        )}
+        {postsByYear[year].map(post => {
+          const formattedDate = post.publishDate.toLocaleString('default', { day: '2-digit', month: 'short', year: 'numeric' });
+          const shortDate = formattedDate.split(', ')[0]
+          return <PostListItem title={post.title} slug={post.slug} formattedDate={shortDate}/>
+        })}
       </ul>
     )
   })}
