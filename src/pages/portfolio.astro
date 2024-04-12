@@ -1,7 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Project from "../components/Cards/Project.astro"
 ---
 
 <Layout>
-  portfolio still under construction
+  <h1>Projects</h1>
+  <div class="grid grid-cols-3 gap-3">
+    <Project 
+    repo="https://github.com/luke-hays/portfolio-site"
+    title="lukehays.com"
+    >
+      Source code for this website.
+    </Project>
+  </div>
 </Layout>
