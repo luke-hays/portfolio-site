@@ -1,20 +1,10 @@
 ---
-import Project from "../Cards/Project.astro"
+import Project from "./Project.astro"
 import { topProjects } from "../../store/projects"
 
 const projects = topProjects.get()
 ---
 
 <div class="grid grid-cols-3 gap-3">
-  {projects.map(project => {
-    const {source, description, title} = project.data
-    return (
-      <Project 
-        repo={source}
-        title={title}
-      >
-        {description}
-      </Project>
-    )
-  })}
+  {projects.map(project => <Project project={project.data} />)}
 </div>
