@@ -1,37 +1,97 @@
 ---
 import Layout from "../layouts/Layout.astro"
+
+const flex= "flex justify-between"
+const flexBold = `${flex} font-semibold`
 ---
 
 <Layout>
   <h1>Luke Hays</h1>
   <h2>Experience</h2>
-  <p>Software Engineer, SingleStone Consulting</p>
-  <p>Nov 2021 - Present</p>
+  <div class={flexBold}>
+    <p>Software Engineer, SingleStone Consulting</p>
+    <p>Nov 2021 - Present</p>
+  </div>
   <ul>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
+    <li>
+      Consulted on UI development for risk management application, leveraging front-end skills to deliver MVP features and
+      enhance development tools and practices. Secured two contract extensions, generating over $2M in additional
+      revenue
+    </li>
+    <li>
+      Delivered major React component library upgrade across 400 files including test suite modifications within half of
+      projected twelve-week scope
+    </li>
+    <li>
+      Coordinated full unit test implementation between two teams within a React codebase to reduce manual testing and
+      enhance deployment confidence. Achieved an 80% test coverage target for over 200 components, utilizing Jest and
+      React Test Library
+    </li>
+  </ul>
+  <div class={flexBold}>
+    <p>Software Engineer, LexisNexis Risk Solutions</p>
+    <p>Nov 2019 - Nov 2021</p>
+  </div>
+  <ul>
+    <li>
+      Developed an inventory management system incorporating a thick client application and web platform. Programmed
+QR code scanning and printing features using JavaScript and C#
+    </li>
+    <li>
+      Implemented CAPTCHA and transitioned record IDs to GUIDs on a public facing web application, mitigating a DoS
+      attack and web scraping efforts      
+    </li>
+    <li>
+      Automated a data entry process with a scheduled job parsing CSV files and importing data into SQL tables, correcting
+      over 100,000 erroneous records and saving the data entry team three days of work
+    </li>
+  </ul>
+  <div class={flexBold}>
+    <p>Data Analyst, Battelle</p>
+    <p>Nov 2018 - Nov 2019</p>
+  </div>
+  <ul>
+    <li>
+      Managed user acceptance testing sessions for a Laboratory Information Management System across four departments
+    </li>
+    <li>
+      Revamped the user acceptance testing process, achieving a 50% reduction in average bug reports during the testing
+    </li>
+    <li>
+      Triaged an average of thirty level three database issues weekly, safeguarding laboratory data integrity
+    </li>
+  </ul>
+  <div class={flexBold}>
+    <p>Project Delivery Analyst, Deloitte (Contract)</p>
+    <p>Dec 2017 - Nov 2018</p>
+  </div>
+  <ul>
+    <li>
+      Facilitated user acceptance testing for software project leading a team of twenty QA testers to complete over 100
+manual test cases monthly
+    </li>
+    <li>
+      Delivered software training and onsite support across seven regional offices for a critical software rollout, ensuring
+smooth adoption in locations with 10 or more employees each
+    </li>
   </ul>
   <h2>Skills</h2>
-  <p>Software Engineer, SingleStone Consulting</p>
-  <p>Nov 2021 - Present</p>
   <ul>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
+    <li>Languages: JavaScript, HTML, CSS, SQL, Python, TypeScript</li>
+    <li>Technologies: React, Jest, Cypress, ESLint, Amazon Web Services, Git, Docker</li>
   </ul>
   <h2>Education</h2>
-  <p>Software Engineer, SingleStone Consulting</p>
-  <p>Nov 2021 - Present</p>
-  <ul>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-  </ul>
+  <div class="flex justify-between my-0">
+    <p>Bachelor of Arts - BA, Studio Art, University of Kentucky</p>
+    <p>2012-2017</p>
+  </div>
   <h2>Certifications</h2>
-  <ul>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-    <li>Placeholder</li>
-  </ul>
+  <div class="flex justify-between my-0">
+    <p>AWS Solutions Architect Associate </p>
+    <p>Jul 2022</p>
+  </div>
+  <div class="flex justify-between my-0">
+    <p>CompTIA Security+</p>
+    <p>Jun 2021</p>
+  </div>
 </Layout>
