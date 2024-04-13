@@ -1,12 +1,20 @@
 ---
 import Project from "../Cards/Project.astro"
+import { topProjects } from "../../store/projects"
+
+const projects = topProjects.get()
 ---
 
 <div class="grid grid-cols-3 gap-3">
-  <Project 
-    repo="https://github.com/luke-hays/portfolio-site"
-    title="lukehays.com"
-  >
-    Source code for this website.
-  </Project>
+  {projects.map(project => {
+    const {source, description, title} = project.data
+    return (
+      <Project 
+        repo={source}
+        title={title}
+      >
+        {description}
+      </Project>
+    )
+  })}
 </div>
