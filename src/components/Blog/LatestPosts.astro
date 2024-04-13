@@ -1,13 +1,13 @@
 ---
 import PostListItem from './PostListItem.astro'
-import {posts} from '../../atoms/blogStore'
+import {latestPosts} from '../../store/posts'
 
-const latestPosts = posts.get().slice(0, 5)
+const posts = latestPosts.get()
 ---
 
 <div>
   <ul>
-    {latestPosts.map(post => {
+    {posts.map(post => {
       const formattedDate = post.publishDate.toLocaleString('default', { month: 'long', year: 'numeric' });
       return <PostListItem title={post.title} slug={post.slug} formattedDate={formattedDate} />
     })}
