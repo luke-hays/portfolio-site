@@ -1,21 +1,19 @@
 ---
-const {project, includeDetails} = Astro.props;
+import Tag from "./Tag.astro";
 
-const {source, title, description, year, techStack} = project
+const {project} = Astro.props;
+
+const {source, title, description, techStack} = project
 ---
 
-<div class="flex flex-col p-2 rounded border-2 bg-jet border-space">
-  <a class="hover:underline" href={source} target="_blank" rel="noopener noreferrer">{title}</a>
+<div class="flex flex-col p-2 rounded border-2 bg-jet border-space py-5 gap-3">
+  <a class="hover:underline text-lg" href={source} target="_blank" rel="noopener noreferrer">{title}</a>
   <div class="text-sm text-ash">
     {description}
   </div>
-  {includeDetails &&
-    <div class="flex justify-between">
-      <div class="flex gap-2">
-        {techStack.map((item: string) => <p>{item}</p>)}
-      </div>
-      <p>{year}</p>
+  <div class=`flex justify-between items-center`>
+    <div class="flex gap-2 mt-2">
+      {techStack.map((item: string) => <Tag text={item}/>)}
     </div>
-  }
-
+  </div>
 </div>

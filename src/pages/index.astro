@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import TopProjects from '../components/Portfolio/TopProjects.astro'
 import LatestPosts from '../components/Blog/LatestPosts.astro'
+import Projects from '../components/Portfolio/Projects.astro';
+
+import { topProjects } from '../store/projects';
 ---
 
 <Layout>
@@ -13,7 +15,7 @@ import LatestPosts from '../components/Blog/LatestPosts.astro'
 			</div>
 			<div class="flex flex-col p-2 gap-4">
 				<h2>Projects</h2>
-				<TopProjects />
+				<Projects projects={topProjects.get()} gridSize="grid-cols-3"/>
 			</div>
 			<div class="flex flex-col p-2 gap-4">
 				<h2>Latest Posts</h2>

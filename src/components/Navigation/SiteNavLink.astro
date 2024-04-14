@@ -1,19 +1,32 @@
 ---
 const {route, text, isExternal} = Astro.props;
+const {pathname} = Astro.url
 
 const target = isExternal ? '_blank' : '_self'
 const rel = isExternal ? 'noopener noreferrer' : undefined
+
+const activePage = pathname === route
+
+const color = activePage ? 'text-saffron' : 'text-ash'
+const borderColor = activePage ? 'border-saffron' : 'border-ash'
+
+let linkStyle = `
+  px-2
+  py-1
+  rounded
+  border-2
+  active:scale-[.97]
+  transition
+  ease-in-out
+  hover:text-saffron
+  hover:border-saffron
+  ${color}
+  ${borderColor}
+`
 ---
 
 <a 
-  class="
-    px-2 
-    py-1 
-    rounded 
-    border-2 
-    active:scale-[.97] 
-    transition 
-    ease-in-out" 
+  class={linkStyle}
   href={route}
   target={target}
   rel={rel}

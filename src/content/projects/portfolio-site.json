@@ -3,6 +3,6 @@
   "description": "Source code for this website.",
   "title": "lukehays.com",
   "year": "2024",
-  "techStack": ["Astro", "Nano Stores", "Tailwind CSS"],
+  "techStack": ["Astro", "NanoStores", "Tailwind"],
   "displayOnHome": true
 }
