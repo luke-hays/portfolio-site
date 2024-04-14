@@ -13,7 +13,6 @@ export default {
         jet: '#333533',
         ash: '#9BABA4',
         alabaster: "#E8EDDF",
-        saffron: "#F3C33F",
         cerulean: "#1FCBFF"
       },
     },

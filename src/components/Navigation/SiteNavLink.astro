@@ -7,8 +7,8 @@ const rel = isExternal ? 'noopener noreferrer' : undefined
 
 const activePage = pathname === route
 
-const color = activePage ? 'text-saffron' : 'text-ash'
-const borderColor = activePage ? 'border-saffron' : 'border-ash'
+const color = activePage ? 'text-cerulean' : 'text-ash'
+const borderColor = activePage ? 'border-cerulean' : 'border-ash'
 
 let linkStyle = `
   px-2
@@ -18,8 +18,8 @@ let linkStyle = `
   active:scale-[.97]
   transition
   ease-in-out
-  hover:text-saffron
-  hover:border-saffron
+  hover:text-cerulean
+  hover:border-cerulean
   ${color}
   ${borderColor}
 `
