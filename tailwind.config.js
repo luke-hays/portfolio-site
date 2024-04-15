@@ -13,7 +13,8 @@ export default {
         jet: '#333533',
         ash: '#9BABA4',
         alabaster: "#E8EDDF",
-        cerulean: "#1FCBFF"
+        cerulean: "#1FCBFF",
+        gray: "#72726E"
       },
     },
   },
