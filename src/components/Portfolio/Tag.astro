@@ -1,7 +1,25 @@
 ---
 const {text, url} = Astro.props;
+
+const tagStyle = `
+  py-1
+  px-2
+  rounded-xl
+  border-2
+  text-xs
+  text-cerulean
+  border-cerulean
+  active:scale-[.97]
+  transition
+  hover:bg-space
+`
 ---
 
-<div class="py-1 px-2 rounded border-2 text-xs text-cerulean border-cerulean">
+<a 
+  class={tagStyle}
+  href={url}
+  target='_blank'
+  rel='noopener noreferrer'
+>
   {text}
-</div>
+</a>
