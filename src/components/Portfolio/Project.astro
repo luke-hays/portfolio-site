@@ -3,7 +3,7 @@ import Tag from "./Tag.astro";
 
 const {project} = Astro.props;
 
-const {source, title, description, techStack} = project
+const {source, title, description, year, techStack} = project
 ---
 
 <div class="flex flex-col p-2 rounded border-2 bg-jet border-space py-5 gap-3">
@@ -11,9 +11,12 @@ const {source, title, description, techStack} = project
   <div class="text-sm text-ash">
     {description}
   </div>
-  <div class=`flex justify-between items-center`>
-    <div class="flex gap-2 mt-2">
+  <div class=`flex justify-between`>
+    <div class="flex flex-wrap gap-2 text-nowrap">
       {techStack.map((item: string) => <Tag text={item}/>)}
+    </div>
+    <div class="text-cerulean">
+      {year}
     </div>
   </div>
 </div>

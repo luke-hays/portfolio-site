@@ -9,6 +9,7 @@ const activePage = pathname === route
 
 const color = activePage ? 'text-cerulean' : 'text-ash'
 const borderColor = activePage ? 'border-cerulean' : 'border-ash'
+const bgColor = activePage ? 'bg-jet' : 'bg-transparent'
 
 let linkStyle = `
   px-2
@@ -20,8 +21,10 @@ let linkStyle = `
   ease-in-out
   hover:text-cerulean
   hover:border-cerulean
+  hover:bg-jet
   ${color}
   ${borderColor}
+  ${bgColor}
 `
 ---
 
