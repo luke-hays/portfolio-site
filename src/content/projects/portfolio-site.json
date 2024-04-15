@@ -4,5 +4,6 @@
   "title": "lukehays.com",
   "year": "2024",
   "techStack": ["Astro", "Nano Stores", "Tailwind CSS"],
+  "tags": ["astro", "nanostores", "tailwindcss"],
   "displayOnHome": true
 }
