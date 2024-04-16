@@ -3,8 +3,16 @@ import Project from "./Project.astro"
 import type { CollectionEntry } from "astro:content";
 
 const {projects, gridSize} = Astro.props;
+const responsiveGridSize = 'md:' + gridSize
+
+let gridStyle = `
+  grid
+  gap-3
+  grid-cols-1
+  ${responsiveGridSize}
+`
 ---
 
-<div class=`grid gap-3 ${gridSize}`>
+<div class=`${gridStyle}`>
   {projects.map((project: CollectionEntry<'projects'>) => <Project project={project}/>)}
 </div>

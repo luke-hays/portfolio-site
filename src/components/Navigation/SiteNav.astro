@@ -2,11 +2,12 @@
 import SiteNavLink from "./SiteNavLink.astro"
 ---
 
-<nav class="flex gap-3 justify-end">
-  <SiteNavLink route="/" text="Home"/>
-  <SiteNavLink route="/portfolio/" text="Portfolio"/>
-  <SiteNavLink route="/resume/" text="Resume"/>
-  <SiteNavLink route="/blog/" text="Blog"/>
-  <SiteNavLink route="https://www.linkedin.com/in/luke-hays64/" text="LinkedIn" isExternal/>
-  <SiteNavLink route="https://github.com/luke-hays" text="GitHub" isExternal/>
+<nav>
+  <ul id="nav-menu" class="flex gap-2 md:gap-3 justify-end">
+    <li><SiteNavLink route="/" text="Home"/></li>
+    <li><SiteNavLink route="/portfolio/" text="Portfolio"/></li>
+    <li><SiteNavLink route="/resume/" text="Resume"/></li>
+    <li><SiteNavLink route="/blog/" text="Blog"/></li>
+    <li class="hidden md:block"><SiteNavLink route="https://github.com/luke-hays" text="GitHub" isExternal/></li>
+  </ul>
 </nav>

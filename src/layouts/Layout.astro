@@ -1,5 +1,6 @@
 ---
 import SiteNav from '../components/Navigation/SiteNav.astro';
+import ContactLinks from '../components/Navigation/ContactLinks.astro'
 ---
 
 <!doctype html>
@@ -12,10 +13,17 @@ import SiteNav from '../components/Navigation/SiteNav.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Luke Hays</title>
 	</head>
-	<body class="bg-night text-alabaster">
-		<div class="flex flex-col gap-10 w-[50rem] mx-auto my-9">
-			<SiteNav />
-			<slot />
+	<body class="bg-night text-white gap-10 w-80 md:w-[50rem] mx-auto my-9">
+		<div class="flex flex-col h-screen mx-2">
+			<header class="shrink-0">
+				<SiteNav />
+			</header>
+			<main class="shrink-0 grow">
+				<slot />
+			</main>
+			<footer class="shrink-0">
+				<ContactLinks />
+			</footer>
 		</div>
 	</body>
 </html>

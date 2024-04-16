@@ -7,20 +7,18 @@ import { topProjects } from '../store/projects';
 ---
 
 <Layout>
-	<main>
-		<div class="flex flex-col gap-10">
-			<div class="flex flex-col p-2 gap-4">
-				<h1>Luke Hays</h1>
-				<p>I'm a software engineer with over 5 years of experience specializing in web development, particular front end UI's. Still a WIP, need to go find some old "under construction" gifs.</p>
-			</div>
-			<div class="flex flex-col p-2 gap-4">
-				<h2>Projects</h2>
-				<Projects projects={topProjects.get()} gridSize="grid-cols-3"/>
-			</div>
-			<div class="flex flex-col p-2 gap-4">
-				<h2>Latest Posts</h2>
-				<LatestPosts />
-			</div>
+	<div class="flex flex-col gap-5 md:gap-10">
+		<div class="flex flex-col p-2 gap-4">
+			<h1>Luke Hays</h1>
+			<p>I'm a software engineer with over 5 years of experience specializing in web development, particular front end UI's. Still a WIP, need to go find some old "under construction" gifs.</p>
 		</div>
-	</main>
+		<div class="flex flex-col p-2 gap-4">
+			<h2>Projects</h2>
+			<Projects projects={topProjects.get()} gridSize="grid-cols-3"/>
+		</div>
+		<div class="flex flex-col p-2 gap-4">
+			<h2>Latest Posts</h2>
+			<LatestPosts />
+		</div>
+	</div>
 </Layout>
