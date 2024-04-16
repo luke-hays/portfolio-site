@@ -7,8 +7,8 @@ const blogCollection = defineCollection({
   schema: z.object({ 
     title: z.string(),
     publishDate: z.string().transform(str => {
-      const date = new Date(str)
-      return date
+      const date = new Date(str);
+      return date;
     })
    })
  });
@@ -23,7 +23,7 @@ const projectCollection = defineCollection({
     tags: z.array(reference('tags')).default([]),
     displayOnHome: z.boolean()
   })
- })
+ });
 
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"

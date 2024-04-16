@@ -1,5 +1,5 @@
 ---
-import Project from "./Project.astro"
+import Project from "./Project.astro";
 import type { CollectionEntry } from "astro:content";
 
 const {projects, gridSize} = Astro.props;
@@ -10,7 +10,7 @@ let gridStyle = `
   grid-cols-1
   md:grid-cols-2
   ${gridSize}
-`
+`;
 ---
 
 <div class=`${gridStyle}`>

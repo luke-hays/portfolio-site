@@ -1,15 +1,15 @@
 ---
-import PostListItem from './PostListItem.astro'
-import {latestPosts} from '../../store/posts'
+import PostListItem from './PostListItem.astro';
+import {latestPosts} from '../../store/posts';
 
-const posts = latestPosts.get()
+const posts = latestPosts.get();
 ---
 
 <div>
   <ul>
     {posts.map(post => {
       const formattedDate = post.publishDate.toLocaleString('default', { month: 'long', year: 'numeric' });
-      return <PostListItem title={post.title} slug={post.slug} formattedDate={formattedDate} />
+      return <PostListItem title={post.title} slug={post.slug} formattedDate={formattedDate} />;
     })}
   </ul>
 </div>

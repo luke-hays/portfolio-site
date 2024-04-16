@@ -1,15 +1,15 @@
 ---
 const {route, text, isExternal} = Astro.props;
-const {pathname} = Astro.url
+const {pathname} = Astro.url;
 
-const target = isExternal ? '_blank' : '_self'
-const rel = isExternal ? 'noopener noreferrer' : undefined
+const target = isExternal ? '_blank' : '_self';
+const rel = isExternal ? 'noopener noreferrer' : undefined;
 
-const activePage = pathname === route
+const activePage = pathname === route;
 
-const color = activePage ? 'text-cerulean' : 'text-ash'
-const borderColor = activePage ? 'border-cerulean' : 'border-ash'
-const bgColor = activePage ? 'bg-jet' : 'bg-transparent'
+const color = activePage ? 'text-cerulean' : 'text-ash';
+const borderColor = activePage ? 'border-cerulean' : 'border-ash';
+const bgColor = activePage ? 'bg-jet' : 'bg-transparent';
 
 let linkStyle = `
   md:px-2
@@ -27,7 +27,7 @@ let linkStyle = `
   ${color}
   ${borderColor}
   ${bgColor}
-`
+`;
 ---
 
 <a 

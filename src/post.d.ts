@@ -4,6 +4,6 @@ declare interface Post {
   publishDate: Date
 }
 
-declare interface PostsByYear extends Object {
+declare interface PostsByYear {
   [index: string]: Array<Post>
 }

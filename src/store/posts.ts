@@ -1,47 +1,47 @@
 import { atom } from 'nanostores';
 import {getCollection} from "astro:content";
 
-const blogPosts = await getCollection('blog')
+const blogPosts = await getCollection('blog');
 
 function getLatestPosts() {
-  const sortedPosts: Array<Post> = []
+  const sortedPosts: Array<Post> = [];
 
   blogPosts.forEach(post => {
     const postData = {
       slug: post.slug,
       title: post.data.title,
       publishDate: post.data.publishDate
-    }
+    };
     
-    sortedPosts.push(postData)
-  })
+    sortedPosts.push(postData);
+  });
 
   sortedPosts.sort((a, b) => {
     if (a.publishDate < b.publishDate)
-      return 1
+      return 1;
     if (a.publishDate > b.publishDate)
-      return -1
-    return 0
-  })
+      return -1;
+    return 0;
+  });
 
-  return sortedPosts.slice(0, 5)
+  return sortedPosts.slice(0, 5);
 }
 
 function getPostsByYear() {
-  const postsByYear: PostsByYear = {}
+  const postsByYear: PostsByYear = {};
 
   blogPosts.forEach(post => {  
-    const postYear = post.data.publishDate.getFullYear().toString()
+    const postYear = post.data.publishDate.getFullYear().toString();
 
     if (!Object.hasOwn(postsByYear, postYear)) {
-      postsByYear[postYear] = []
+      postsByYear[postYear] = [];
     }
 
-    postsByYear[postYear].push({title: post.data.title, slug: post.slug, publishDate: post.data.publishDate})
-  })
+    postsByYear[postYear].push({title: post.data.title, slug: post.slug, publishDate: post.data.publishDate});
+  });
 
-  return postsByYear
+  return postsByYear;
 }
 
-export const latestPosts = atom(getLatestPosts())
-export const posts = atom(getPostsByYear())
+export const latestPosts = atom(getLatestPosts());
+export const posts = atom(getPostsByYear());
