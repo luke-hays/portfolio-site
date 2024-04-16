@@ -1,5 +1,5 @@
-import { atom } from "nanostores";
-import {getCollection} from "astro:content";
+import {atom} from 'nanostores';
+import {getCollection} from 'astro:content';
 
 const projects = await getCollection('projects');
 

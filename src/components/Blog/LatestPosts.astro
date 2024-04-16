@@ -8,8 +8,8 @@ const posts = latestPosts.get();
 <div>
   <ul>
     {posts.map(post => {
-      const formattedDate = post.publishDate.toLocaleString('default', { month: 'long', year: 'numeric' });
+      const formattedDate = post.publishDate.toLocaleString('default', {month: 'long', year: 'numeric'});
       return <PostListItem title={post.title} slug={post.slug} formattedDate={formattedDate} />;
-    })}
+})}
   </ul>
 </div>

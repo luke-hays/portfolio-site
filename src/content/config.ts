@@ -1,15 +1,15 @@
 // 1. Import utilities from `astro:content`
-import { z, defineCollection, reference } from 'astro:content';
+import {z, defineCollection, reference} from 'astro:content';
 
 // 2. Define your collection(s)
-const blogCollection = defineCollection({ 
+const blogCollection = defineCollection({
   type: 'content',
-  schema: z.object({ 
+  schema: z.object({
     title: z.string(),
     publishDate: z.string().transform(str => {
       const date = new Date(str);
       return date;
-    })
+})
    })
  });
 

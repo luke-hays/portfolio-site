@@ -1,7 +1,7 @@
 ---
-import Tag from "./Tag.astro";
-import type { CollectionEntry } from "astro:content";
-import { getEntries } from "astro:content";
+import Tag from './Tag.astro';
+import type {CollectionEntry} from 'astro:content';
+import {getEntries} from 'astro:content';
 
 interface Props {
   project: CollectionEntry<'projects'>
@@ -20,7 +20,7 @@ const tagData = projectTags.map(pt => pt.data);
   <div class="text-sm text-ash">
     {description}
   </div>
-  <div class=`flex justify-between`>
+  <div class='flex justify-between'>
     <nav>
       <ul class="flex flex-wrap gap-2 text-nowrap">
         {tagData.map(td => <li><Tag url={td.url} text={td.text}/></li>)}

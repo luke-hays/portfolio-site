@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "npx eslint src",
+    "lint": "npx eslint src --fix",
     "playwright": "playwright test",
     "playwright:show": "npx playwright show-report"
   },

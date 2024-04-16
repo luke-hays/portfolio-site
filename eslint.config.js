@@ -13,9 +13,20 @@ export default [
       stylistic: stylistic
     },
     rules: {
-      // override/add rules settings here, such as:
-      // "astro/no-set-html-directive": "error"
+      "no-multi-spaces": "error",
+      "no-trailing-spaces": "error",
+      "no-whitespace-before-property": "error",
+      "nonblock-statement-body-position": "error",
+      "object-curly-spacing": "error",
+      "operator-linebreak": ['error', "before"],
+      "padded-blocks": ["error", { "blocks": "never" }],
+      "quotes": ["error", "single", { "avoidEscape": true }],
       "semi": "error",
+      "spaced-comment": ["error", "always"],
+      "switch-colon-spacing": "error",
+      "@typescript-eslint/type-annotation-spacing": "error",
+      "stylistic/type-generic-spacing": ["error"],
+      "wrap-iife": ["error", "outside"]
     }
   },
 ];

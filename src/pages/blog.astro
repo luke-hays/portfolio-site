@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import PostListItem from "../components/Blog/PostListItem.astro";
+import Layout from '../layouts/Layout.astro';
+import PostListItem from '../components/Blog/PostListItem.astro';
 import {posts} from '../store/posts';
 
 const allPosts = posts.get();
@@ -16,11 +16,11 @@ sortedYears.sort().reverse();
       <h2>{year}</h2>
       <ul>
         {allPosts[year].map(post => {
-          const formattedDate = post.publishDate.toLocaleString('default', { day: '2-digit', month: 'short', year: 'numeric' });
+          const formattedDate = post.publishDate.toLocaleString('default', {day: '2-digit', month: 'short', year: 'numeric'});
           const shortDate = formattedDate.split(', ')[0];
           return <PostListItem title={post.title} slug={post.slug} formattedDate={shortDate}/>;
-        })}
+})}
       </ul>
     );
-  })}
+})}
 </Layout>

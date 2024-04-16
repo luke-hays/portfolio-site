@@ -1,5 +1,5 @@
-import { atom } from 'nanostores';
-import {getCollection} from "astro:content";
+import {atom} from 'nanostores';
+import {getCollection} from 'astro:content';
 
 const blogPosts = await getCollection('blog');
 
@@ -12,17 +12,15 @@ function getLatestPosts() {
       title: post.data.title,
       publishDate: post.data.publishDate
     };
-    
+
     sortedPosts.push(postData);
-  });
+});
 
   sortedPosts.sort((a, b) => {
-    if (a.publishDate < b.publishDate)
-      return 1;
-    if (a.publishDate > b.publishDate)
-      return -1;
+    if (a.publishDate < b.publishDate) return 1;
+    if (a.publishDate > b.publishDate) return -1;
     return 0;
-  });
+});
 
   return sortedPosts.slice(0, 5);
 }
@@ -30,15 +28,15 @@ function getLatestPosts() {
 function getPostsByYear() {
   const postsByYear: PostsByYear = {};
 
-  blogPosts.forEach(post => {  
+  blogPosts.forEach(post => {
     const postYear = post.data.publishDate.getFullYear().toString();
 
     if (!Object.hasOwn(postsByYear, postYear)) {
       postsByYear[postYear] = [];
-    }
+}
 
     postsByYear[postYear].push({title: post.data.title, slug: post.slug, publishDate: post.data.publishDate});
-  });
+});
 
   return postsByYear;
 }
