@@ -5,7 +5,21 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
+  setup:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
+    steps:
+      - name: Checkout repo to runner
+        uses: actions/checkout@v4
+      - name: Set script to executable
+        run: chmod +x ./test-setup.sh
+      - name: Run test setup script
+        run: ./test-setup.sh
   test:
+    needs: setup
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
