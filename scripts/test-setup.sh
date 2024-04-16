@@ -3,6 +3,6 @@
 rm -rf ../src/content/blog
 rm -rf ../src/content/projects
 
-cp ./blog ../src/content
-cp ./projects ../src/content
+cp -r ./blog ../src/content
+cp -r ./projects ../src/content
 
