@@ -19,7 +19,7 @@ sortedYears.sort().reverse();
           const formattedDate = post.publishDate.toLocaleString('default', {day: '2-digit', month: 'short', year: 'numeric'});
           const shortDate = formattedDate.split(', ')[0];
           return <PostListItem title={post.title} slug={post.slug} formattedDate={shortDate}/>;
-})}
+        })}
       </ul>
     );
 })}
