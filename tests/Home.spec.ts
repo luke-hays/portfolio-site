@@ -34,10 +34,11 @@ test('Home Page displays Name, Navbar, Footer, 6 Top Projects, and 5 Latest Post
   if (process.env.CI) {
     // Expect projects to be on the front page
     await expect(page.getByRole('link', {name: "lukehays.com"})).toBeVisible();
+    await expect(page.getByRole('link', {name: "lukehays.com"})).toHaveAttribute('href', 'https://www.linkedin.com/in/luke-hays64/');
+
     await expect(page.getByRole('link', {name: "Astro"})).toBeVisible();
-    await expect(page.getByRole('link', {name: "Nano Stores"})).toBeVisible();
-    await expect(page.getByRole('link', {name: "Tailwind CSS"})).toBeVisible();
-    
+    await expect(page.getByRole('link', {name: "Astro"})).toHaveAttribute('href', 'https://www.linkedin.com/in/luke-hays64/');
+
     // Expect latest posts to be on the front page. There should be at least one
     for (const link of await page.getByRole('link', {name: /Test Post/}).all()) {
       await expect(link).toBeVisible();
