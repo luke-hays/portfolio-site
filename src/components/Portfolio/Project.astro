@@ -15,9 +15,9 @@ const projectTags = await getEntries(tags);
 const tagData = projectTags.map(pt => pt.data);
 ---
 
-<div class="flex flex-col p-2 rounded border-2 bg-jet border-space py-5 gap-3">
+<div class="flex flex-col p-2 rounded border-2 bg-jet border-space py-5 gap-1">
   <a class="hover:underline text-lg" href={source} target="_blank" rel="noopener noreferrer">{title}</a>
-  <div class="text-sm text-ash">
+  <div class="text-sm text-ash mb-2">
     {description}
   </div>
   <div class='flex justify-between'>
