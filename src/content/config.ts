@@ -9,7 +9,8 @@ const blogCollection = defineCollection({
     publishDate: z.string().transform(str => {
       const date = new Date(str);
       return date;
-})
+    }),
+    publish: z.boolean().default(false)
    })
  });
 
