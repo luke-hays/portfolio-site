@@ -13,17 +13,15 @@ import ContactLinks from '../components/Navigation/ContactLinks.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>Luke Hays</title>
 	</head>
-	<body class="bg-night text-white gap-10 w-80 md:w-[50rem] mx-auto my-9">
-		<div class="mx-2 flex flex-col h-[calc(100vh-74px)]">
-			<header class="h-6 flex justify-end items-center">
-				<SiteNav />
-			</header>
-			<main class="grow mt-10">
-				<slot />
-			</main>
-			<footer class="mt-10">
-				<ContactLinks />
-			</footer>
-		</div>
+	<body class="bg-night min-w-64 mx-auto w-48 md:min-w-[40rem] md:w-2/4 md:max-w-[70rem] text-white min-h-screen flex flex-col gap-6">
+		<header class="flex justify-end items-center mt-8">
+			<SiteNav />
+		</header>
+		<main class="mb-8">
+			<slot />
+		</main>
+		<footer class="flex justify-center mt-auto mb-8">
+			<ContactLinks />
+		</footer>
 	</body>
 </html>
