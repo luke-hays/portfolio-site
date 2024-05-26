@@ -1,8 +1,7 @@
 declare interface Post {
   slug: string,
   title: string,
-  publishDate: Date,
-  publish?: Boolean
+  publishDate: Date
 }
 
 declare interface PostsByYear {
