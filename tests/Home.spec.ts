@@ -37,7 +37,7 @@ test('Home Page displays Name, Navbar, Footer, 6 Top Projects, and 5 Latest Post
     await expect(page.getByRole('link', {name: "lukehays.com"})).toHaveAttribute('href', 'https://github.com/luke-hays/portfolio-site');
 
     await expect(page.getByRole('link', {name: "Astro", exact: true})).toBeVisible();
-    await expect(page.getByRole('link', {name: "Astro"})).toHaveAttribute('href', 'https://astro.build/');
+    await expect(page.getByRole('link', {name: "Astro", exact: true})).toHaveAttribute('href', 'https://astro.build/');
 
     // Expect latest posts to be on the front page. There should be at least one
     for (const link of await page.getByRole('link', {name: /Test Post/}).all()) {
