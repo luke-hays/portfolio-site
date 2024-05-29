@@ -1,0 +1,19 @@
+:root {
+  --post-element-stack-size: 1rem;
+}
+
+.blog-post h1 {
+  margin-bottom: var(--post-element-stack-size);
+}
+
+.blog-post h2 {
+  margin-bottom: var(--post-element-stack-size);
+}
+
+.blog-post p {
+  margin-bottom: var(--post-element-stack-size);
+}
+
+.blog-post pre {
+  margin-bottom: var(--post-element-stack-size);
+}

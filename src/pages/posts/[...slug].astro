@@ -1,4 +1,6 @@
 ---
+// Tailwind is set up, but Astro's markdown rendering is a little weird with spacing.
+import './blog-post.css'
 import {getCollection} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
@@ -17,5 +19,7 @@ const {Content} = await entry.render();
 ---
 
 <Layout>
-  <Content />
+  <div class="blog-post">
+    <Content/>
+  </div>
 </Layout>
