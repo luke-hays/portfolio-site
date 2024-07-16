@@ -1,0 +1,8 @@
+{
+  "source": "https://github.com/luke-hays/really-simple-rss-reader",
+  "description": "RSS Reader Web Application",
+  "title": "Simple(?) RSS Reader",
+  "year": "2024",
+  "tags": ["Node", "Express", "MongoDB", "Docker"],
+  "displayOnHome": true
+}
