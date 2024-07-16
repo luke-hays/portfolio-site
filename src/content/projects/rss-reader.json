@@ -3,6 +3,6 @@
   "description": "RSS Reader Web Application",
   "title": "Simple(?) RSS Reader",
   "year": "2024",
-  "tags": ["Node", "Express", "MongoDB", "Docker"],
+  "tags": ["node", "mongodb", "docker"],
   "displayOnHome": true
 }
