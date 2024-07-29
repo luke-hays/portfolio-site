@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 
 const sectionHeader = 'my-3';
-const jobHeader = 'flex justify-between font-semibold';
+const jobHeader = 'flex justify-between font-semibold pb-4';
 const jobDescription = 'mb-3 ml-6';
 const jobList = 'list-disc marker:text-gray';
 const achievement = 'flex justify-between my-0';
@@ -20,17 +20,14 @@ const achievement = 'flex justify-between my-0';
       </div>
       <ul class={jobList}>
         <li class={jobDescription}>
-          Consulted on front-end development for a third-party risk management tool used by a Fortune 500 financial client, resulting in two contract extensions and generating over $2M in additional revenue.
+          Consulted on frontend development in React for a third-party risk management tool used by a Fortune 500 financial client, resulting in two contract extensions and generating over $2M in additional revenue.        </li>
+        <li class={jobDescription}>
+          Implemented a major component library upgrade, addressing deprecated APIs and broken test cases in over 400 files.
         </li>
         <li class={jobDescription}>
-          Implemented a major third-party dependency upgrade, addressing deprecated APIs and completing the task 9 sprints ahead of the initial 12-sprint schedule.        
-        </li>
+          Coordinated two software developer teams to achieve 80% unit test coverage for a React application using Jest on a shared codebase.        </li>
         <li class={jobDescription}>
-          Coordinated two teams to achieve 80% unit test coverage for a React application using Jest.
-        </li>
-        <li class={jobDescription}>
-          Led a team of three developers in launching the initial phase of a mental health practitioners' finder and registry tool using Next.js, successfully meeting a rigorous six-week deadline.
-        </li>
+          Led a team of three developers in launching the initial phase of a mental health practitioners' finder and registry tool using Next.js.        </li>
       </ul>
 
       <div class={jobHeader}>
@@ -42,11 +39,9 @@ const achievement = 'flex justify-between my-0';
           Engineered an inventory management system that integrated desktop and web platforms using C# and SQL Server.
         </li>
         <li class={jobDescription}>
-          Mitigated a denial of service attack on a public-facing web application by implementing rate limiting on search functions and refactoring sequential IDs in routing.
-        </li>
+          Mitigated a denial of service attack on a public-facing web application by implementing rate limiting on search functions and refactoring sequential IDs in routing.        </li>
         <li class={jobDescription}>
-          Automated a monthly data entry process by developing scripts for parsing CSV files and importing data into SQL tables, resolving over 100,000 erroneous records.
-        </li>
+          Automated a monthly data entry process by developing scripts for parsing CSV files and importing data into SQL tables, resolving over 100,000 erroneous records.        </li>
       </ul>
 
       <div class={jobHeader}>
@@ -55,17 +50,14 @@ const achievement = 'flex justify-between my-0';
       </div>
       <ul class={jobList}>
         <li class={jobDescription}>
+          Addressed and resolved bug reports for a Laboratory Information Management System using C# and ActiveReports.
+        </li>
+        <li class={jobDescription}>
           Revamped laboratory user acceptance testing (UAT) process, reducing average bug reports by 50% during testing.
-        </li>
-        <li class={jobDescription}>
-          Triaged an average of thirty level three database issues weekly, maintaining laboratory data integrity.
-        </li>
-        <li class={jobDescription}>
-          Addressed and resolved bug reports for the Laboratory Information Management System using C# and ActiveReports.
         </li>
       </ul>
       <div class={jobHeader}>
-        <p>Project Delivery Analyst, Deloitte (Contract)</p>
+        <p>Project Delivery Analyst, TEKsystems</p>
         <p>Dec 2017 - Nov 2018</p>
       </div>
       <ul class={jobList}>
@@ -81,8 +73,9 @@ const achievement = 'flex justify-between my-0';
     <div>
       <h2 class={sectionHeader}>Skills</h2>
       <ul>
-        <li><span class="font-semibold">Languages:</span> TypeScript, JavaScript, HTML5, CSS3, SQL, Python</li>
-        <li><span class="font-semibold">Technologies:</span> React, Node.js, Jest, Playwright, ESLint, Amazon Web Services, Git, Docker</li>
+        <li><span class="font-semibold">Languages:</span>TypeScript, JavaScript, HTML, CSS, SQL, Python</li>
+        <li><span class="font-semibold">Technologies:</span>React, Node.js, Jest, Playwright, SASS, PostgreSQL, MongoDB</li>
+        <li><span class="font-semibold">Tools:</span>Docker, Amazon Web Services, Git</li>
       </ul>
     </div>
 
@@ -94,18 +87,5 @@ const achievement = 'flex justify-between my-0';
       </div>
     </div>
 
-    <div>
-      <h2 class={sectionHeader}>Certifications</h2>
-      <ul>
-        <li class={achievement}>
-          <p>AWS Solutions Architect Associate </p>
-          <p>Jul 2022</p>
-        </li>
-        <li class={achievement}>
-          <p>CompTIA Security+</p>
-          <p>Jun 2021</p>
-        </li>
-      </ul>
-    </div>
   </div>
 </Layout>
