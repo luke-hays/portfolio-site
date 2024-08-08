@@ -1,6 +1,6 @@
 # Personal Website
 
-This repository contains the code for my own personal website INSERT_LATER. My previous site was a simple static page hosted on an S3 bucket, but I decided to build something more complex with a few additional features, such as a portfolio section and a blog.
+This repository contains the code for my own personal website [lukehays.com](https://lukehays.com/). My previous site was a simple static page hosted on an S3 bucket, but I decided to build something more complex with a few additional features, such as a portfolio section and a blog.
 
 The goal with this website is not only to have a convenient place to host my portfolio but also to help motivate learning new development concepts. To that end, I've picked a few pieces of technology that I'm not familiar with, but feel they would be easy to pick up and run with:
 
